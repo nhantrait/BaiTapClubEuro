@@ -1,6 +1,4 @@
-package model;
-
-import android.content.Intent;
+package it.nhan.clubseuro.models;
 
 import java.io.Serializable;
 
@@ -14,9 +12,11 @@ public class Club implements Serializable {
     private String National;
     private int Number;
 
+    //Tên thuộc tính bắt đầu bằng chữ thường
 
 
     public Club (){}
+
     public int getImage() {
         return Image;
     }
@@ -54,6 +54,6 @@ public class Club implements Serializable {
         this.Name = name;
         this.National = national;
         this.Number = number;
-
+        //Không để thừa dòng trống ở cuối phương thức
     }
 }

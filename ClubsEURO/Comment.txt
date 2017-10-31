@@ -1,0 +1,7 @@
+-Chú ý cách sắp xếp thư mục
+-Khi tạo file xml, thì nên để giá trị mặc định cho các trường trong đó, để khi nhìn vào thì dev khác dễ hình dung ra layout của mình trong như thế nào
+-Hạn chế dùng chứ in nghiêng
+-Đặt tên biến, id hạn chế đặt tên kèm theo số 1,2 ở phía sau.
+-Đặt tên id trong xml nên đặt tên theo kiểu: main_activity_lv_club
+-Về git em chỉ có một commit, không tạo nhánh mới nên chưa đạt yêu cầu
+-Chấm điểm: code được 4/5 điểm, git được 1/5 điểm. Tổng 5/10 điểm

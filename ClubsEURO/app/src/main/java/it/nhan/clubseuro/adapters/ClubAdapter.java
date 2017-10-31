@@ -1,9 +1,8 @@
-package adapter;
+package it.nhan.clubseuro.adapters;
+//packpage để ở số nhiều nhé.
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,22 +13,24 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.Serializable;
 import java.util.List;
 
-import it.nhan.clubseuro.DetailActivity;
-import it.nhan.clubseuro.MainActivity;
+import it.nhan.clubseuro.activities.DetailActivity;
 import it.nhan.clubseuro.R;
-import model.Club;
+import it.nhan.clubseuro.models.Club;
+//cái import nào không dùng thì xóa đi
 
 /**
- * Created by nhan on 10/16/2017.
+ * Created by nhan on 10/16/2017. Viết tên Dev rõ ràng hơn
  */
 
 public class ClubAdapter extends ArrayAdapter<Club> {
     Activity context;
     @LayoutRes int resource;
-    @NonNull List<Club> objects;
+    @NonNull List<Club> objects;//đổi tên cho rõ ràng hơn
+    //set về private, cái nào cần public thì mới để public
+    //Sau phần khai báo biến để trống một dòng cho dễ nhìn
+
     public ClubAdapter(@NonNull Activity context, @LayoutRes int resource, @NonNull List<Club> objects) {
         super(context, resource, objects);
         this.context = context;
@@ -83,7 +84,7 @@ public class ClubAdapter extends ArrayAdapter<Club> {
 
     }
 
-    private void XuLyIntent(Club club) {
+    private void XuLyIntent(Club club) {//nên đặt là viewDetail hoặc là showDetail nhé, phải đặt tên rõ ràng
         Intent intent = new Intent(this.context, DetailActivity.class);
         intent.putExtra("CLUB",club);
         this.context.startActivity(intent);

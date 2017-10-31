@@ -1,4 +1,4 @@
-package it.nhan.clubseuro;
+package it.nhan.clubseuro.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,12 +6,15 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import model.Club;
+import it.nhan.clubseuro.R;
+import it.nhan.clubseuro.models.Club;
 
 public class DetailActivity extends AppCompatActivity {
     TextView txtNameClub1,txtNational1,txtNumber1;
-    ImageView igClub1;
-    Club selectedClub = null;
+    ImageView igClub1;//imgClub
+    Club selectedClub = null;//club
+    //set private, xuống một dòng, bỏ mấy cái số 1 đi
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

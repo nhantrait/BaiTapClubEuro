@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="it.nhan.clubseuro.MainActivity">
+    tools:context="it.nhan.clubseuro.activities.MainActivity">
 
 
     <ImageView

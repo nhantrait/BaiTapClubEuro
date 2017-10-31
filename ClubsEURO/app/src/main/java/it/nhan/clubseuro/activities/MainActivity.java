@@ -1,4 +1,5 @@
-package it.nhan.clubseuro;
+package it.nhan.clubseuro.activities;
+//Chú ý về packpage, anh đã sửa lại cho đúng rồi nhé
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,13 +7,16 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import adapter.ClubAdapter;
-import model.Club;
+import it.nhan.clubseuro.R;
+import it.nhan.clubseuro.adapters.ClubAdapter;
+import it.nhan.clubseuro.models.Club;
 
 public class MainActivity extends AppCompatActivity {
     ListView lvClub;
-    ArrayList<Club>dsClub;
+    ArrayList<Club>dsClub;//cách ra
     ClubAdapter clubAdapter;
+    //Xuống dòng
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,5 +45,7 @@ public class MainActivity extends AppCompatActivity {
         dsClub.add(new Club(R.drawable.manunited,"Manchester United","England",1));
         dsClub.add(new Club(R.drawable.psg,"Paris Saint-Germain","France",0));
         clubAdapter.notifyDataSetChanged();
+        //nên add data trước rồi setAdapter sau.
+        //Viết riêng một phương thức tạo dữ liệu giả riêng. không viết chung, nên viết trong model luôn
     }
 }
